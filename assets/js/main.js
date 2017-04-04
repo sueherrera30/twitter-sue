@@ -3,6 +3,7 @@ var i = 0;
 var clicks = 0;
 var boton = document.getElementById('boton');
 boton.addEventListener("click",agregarTweet);
+boton.addEventListener("click",borrar);
 
 function agregarTweet(){
   var areaTexto = document.getElementById('areaTexto').value;
@@ -25,7 +26,14 @@ function agregarTweet(){
     }
      contador.innerHTML = "has usado " + i + "  /140";
 
+
 }
+function borrar(){
+  document.getElementById('areaTexto').value = "";
+  document.getElementById('autor').value="";
+  contadorLetritas();
+}
+
 
 document.addEventListener("click",contadorClicks);
 
